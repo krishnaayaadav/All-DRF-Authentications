@@ -32,7 +32,7 @@ class EmployeeAPI(APIView):
        """
        
     authentication_classes  = [TokenAuthentication]
-    permission_classes       = [IsAuthenticatedOrReadOnly]
+    permission_classes       = [IsAuthenticated]
 
     # fetch data from database
     def get(self, request, id=None, format=None):
